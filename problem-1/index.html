@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+/*for the flexboxes*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*Create 4 coloums of equal size*/
+.column {
+  flex: 25%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+/* On screens that are 960px wide or less, go from four columns to two columns */
+@media screen and (max-width: 960px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+/* On screens that are 640px wide or less, stack the columns over eachother*/
+@media screen and (max-width: 640px) {
+  .row {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="column" style="background-color: #ffffff;">
+    <h2>Box 1</h2>
+    <p>Hello.</p>
+  </div>
+  
+  <div class="column" style="background-color:#ffffff;">
+    <h2>Box 2</h2>
+    <p>Welcome to TUDublin.</p>
+  </div>
+  
+  <div class="column" style="background-color:#ffffff;">
+    <h2>Box 3</h2>
+    <p>My Student Number is C19432806</p>
+  </div>
+  
+  <div class="column" style="background-color:#ffffff;">
+    <h2>Box 4</h2>
+    <p>What is yours?</p>
+  </div>
+</div>
+
+</body>
+</html>
